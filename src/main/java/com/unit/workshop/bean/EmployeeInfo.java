@@ -12,4 +12,6 @@ public class EmployeeInfo {
     private String name;
 
     private String mobile;
+
+    private double hourlyRate;
 }

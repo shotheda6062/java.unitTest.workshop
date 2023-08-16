@@ -11,4 +11,5 @@ public interface EmployeeService {
     EmployeeInfo getEmployeeInfo(String employeeID);
 
 
+     double calculateSalaryForEmployee(String employeeId);
 }
