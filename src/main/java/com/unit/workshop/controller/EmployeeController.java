@@ -14,13 +14,13 @@ public class EmployeeController {
     EmployeeService employeeService;
 
     @PostMapping("/createEmployee")
-    public void createEmployee(@RequestBody EmployeeInfo employeeInfo) {
-
+    public void createEmployee(@RequestBody EmployeeInfo employeeInfo) throws Exception {
+        employeeService.createEmployeeInfo(employeeInfo);
     }
 
     @PostMapping("/getEmployeeInfo")
     public void getEmployeeInfo(@RequestBody String employeeID) {
-
+        employeeService.getEmployeeInfo(employeeID);
     }
 
 }

@@ -74,7 +74,6 @@ public class EmployeeDataServiceTester {
         Mockito.when(mockDao.getEmployeeInfo(any(String.class))).thenReturn(null);
         Mockito.doNothing().when(mockDao).insertEmployeeInfo(any());
 
-
         // Act
         EmployeeInfo input = new EmployeeInfo();
         input.setEmployeeID("00001");

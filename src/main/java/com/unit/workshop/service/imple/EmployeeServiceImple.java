@@ -10,18 +10,14 @@ import java.util.Optional;
 
 @Service
 public class EmployeeServiceImple implements EmployeeService {
-
     @Autowired
     EmployeeDataAccess employeeDataAccess;
-
-
     @Override
     public void createEmployeeInfo(EmployeeInfo employeeInfo) throws Exception {
 
         if(null != employeeDataAccess.getEmployeeInfo(employeeInfo.getEmployeeID())) {
             throw new Exception("Employee Is Exist！！！");
         }
-
         employeeDataAccess.insertEmployeeInfo(employeeInfo);
 
     }
